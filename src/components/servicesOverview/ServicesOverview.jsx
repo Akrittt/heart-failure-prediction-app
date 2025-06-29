@@ -18,8 +18,8 @@ function ServicesOverview(){
         {image:report,title:"Report Generator"}
     ]
     return(
-    <div className="">
-        <div className="bg-white text-center ">
+    <div id ="ServicesOverview" className="">
+        <div className="bg-sky-50  border-y-1 border-gray-200/50 text-center ">
             <h2 className="font-medium text-4xl text-sky-800 py-5">
                 Services Overview
             </h2>

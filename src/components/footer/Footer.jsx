@@ -2,8 +2,8 @@ function Footer(){
     return(
         <div>
             <footer class="bg-sky-50">
-            <div class="max-w-6xl  mx-auto px-5 flex flex-col  justify-between items-center space-y-4 sm:space-y-0">
-                <div class="flex space-x-6 text-sm text-sky-800 font-semibold p-8 pt-18">
+            <div class="max-w-6xl  mx-auto px-5 flex flex-col  justify-between items-center md:gap-y-3 sm:space-y-0">
+                <div class="flex flex-wrap justify-center md:flex-wrap-reverse gap-6 text-sm text-sky-800 font-semibold p-8 md:pt-14 ">
                     <a href="#" class="hover:underline">Home</a>
                     <a href="#" class="hover:underline">News</a>
                     <a href="#" class="hover:underline">About Us</a>

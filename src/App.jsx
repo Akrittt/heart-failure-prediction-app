@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import Header from './components/header/header';
 import Menu from './components/menu/Menu';
 import Home from './components/home/Home';
@@ -13,7 +14,8 @@ function App() {
   
   return (
     <>
-      <div className='bg-gradient-to-r bg-white to-sky-100'>
+      <div className='bg-gradient-to-b bg-sky-100 via-white to-sky-100 '>
+
         {/* header */}
         <Header/>
         <Menu/>
