@@ -32,8 +32,7 @@ function App() {
          {/*Patient Portal */}
          <PatientPortal/>
 
-         {/*Blog*/}
-         <Blog/>
+         
 
          <Feedback/>
 
