@@ -3,7 +3,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 import { Link } from "react-router-dom";
 function Menu(){
     return(
-        <nav className="bg-sky-500 text-white font-normal py-3 sticky top-0 z-15 ">
+        <nav className="bg-sky-500 text-white font-normal py-3 sticky top-0 z-50 h-15">
             <ul className="flex flex-wrap justify-center content-center gap-x-15 ">
                 <li>
                     <a href="#Home" 

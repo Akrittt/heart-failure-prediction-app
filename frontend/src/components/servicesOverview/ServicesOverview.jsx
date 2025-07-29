@@ -13,14 +13,13 @@ function ServicesOverview(){
         {image:search,title:"Search Assistant"},
         {image:summarizer,title:"Discharge Instruction"},
         {image:prediction,title:"Prediction"},
-        {image:chatbox,title:"Patient Chatbox"},
         {image:education,title:"Health Tips"},
         {image:report,title:"Report Generator"}
     ]
     return(
     <div id ="ServicesOverview" className="">
-        <div className="bg-sky-50  border-y-1 border-gray-200/50 text-center ">
-            <h2 className="font-medium text-4xl text-sky-800 py-5">
+        <div className="bg-sky-50  border-y-1 border-sky-100 text-center ">
+            <h2 className="font-bold text-4xl text-sky-900 py-5">
                 Services Overview
             </h2>
         </div>

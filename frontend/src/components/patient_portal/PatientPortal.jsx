@@ -1,16 +1,15 @@
 function PatientPortal(){
     return(
         <div id="PatientPortal">
-            <div className="bg-sky-50 text-center border-y-1 border-gray-200/50 ">
-                <h2 className="font-medium text-4xl text-sky-800 py-4">Patient Portal</h2>
+            <div className="bg-sky-50 text-center border-y-1 border-sky-100 ">
+                <h2 className="font-bold text-4xl text-sky-900 py-4">Patient Portal</h2>
             </div>
-            <div className="flex flex-wrap md:flex-wrap-reverse justify-center  h-full">
-                
-                <div className="content-center md:basis-1/2 p-6 md:p-12">
+            <div className="flex flex-col lg:flex-row  justify-center h-full mx-5">   
+                <div className="content-center p-6 ">
                     <p className="text-lg text-center text-sky-700 ">"The Patient Portal allows you to securely view your readmission risk prediction, track your health progress, and access personalized recommendations. Designed to help you stay in control of your heart health."</p>
                 </div>
 
-                <div className="flex flex-col gap-3 md:basis-1/2 justify-center items-center pb-10 md:p-12 ">
+                <div className="flex flex-col gap-3 justify-center items-center py-10 w-full ">
                     <input 
                     type="text"
                     placeholder="Patient ID"

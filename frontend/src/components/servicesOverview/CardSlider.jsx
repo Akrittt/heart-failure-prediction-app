@@ -26,7 +26,7 @@ const CardSlider = ({ cards }) => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="w-[250px] h-55 md:h-75 bg-white rounded-3xl p-4 text-center border-y-2 border-sky-300/30"
+            className="w-55 h-auto md:h-75 bg-white rounded-2xl p-4 text-center border-y-2 shadow-xl border-sky-300"
           >
             <img src={card.image} alt={card.title} className="h-35 md:h-40 mx-auto rounded" />
             <h3 className="font-semibold text-lg md:text-xl py-5 md:py-10 text-blue-900">{card.title}</h3>

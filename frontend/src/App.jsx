@@ -6,9 +6,9 @@ import Home from './components/home/Home';
 import AboutUs from './components/aboutUs/AboutUs';
 import ServicesOverview from './components/servicesOverview/ServicesOverview';
 import PatientPortal from './components/patient_portal/PatientPortal';
-import Blog from './components/blogs/Blog';
-import Feedback from './components/feedback/Feedback';
+
 import Footer from './components/footer/Footer';
+import HealthcareReviews from './components/feedback/HealtcareReviews';
 
 function App() {
   
@@ -26,17 +26,17 @@ function App() {
         {/*About Us */}
         <AboutUs/>
 
-         {/*Service Overview */}
-         <ServicesOverview/>
+        {/*Service Overview */}
+        <ServicesOverview/>
 
-         {/*Patient Portal */}
-         <PatientPortal/>
+        {/*Patient Portal */}
+        <PatientPortal/>
 
          
 
-         <Feedback/>
+       <HealthcareReviews/>
 
-         <Footer/>
+        <Footer/>
 
 
 
