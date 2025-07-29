@@ -10,8 +10,8 @@ function Home() {
         <section id="Home" className="grid justify-center lg:flex  md:flex-nowrap mt-5">
             <div className="flex flex-col justify-center text-center gap-7 p-5 md:p-20  ">
 
-                <h1 className="font-bold text-4xl md:text-5xl text-blue-950">Comprehensive Care For<br />A <span className="text-sky-700">Healthier</span> Tommorow</h1>
-                <p className=" text-lg">
+                <h1 className="font-bold text-4xl md:text-5xl text-gray-800">Comprehensive Care For<br />A <span className="text-sky-700">Healthier</span> Tommorow</h1>
+                <p className=" text-lg text-gray-600">
                     Our application offers an intelligent prediction system for heart failure patient readmission. Empowering healthcare providers with data-driven insights to improve post-discharge outcomes with AI assistant.
                 </p>
                 <div className="flex justify-center gap-x-4 md:gap-x-2">

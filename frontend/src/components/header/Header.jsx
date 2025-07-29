@@ -18,7 +18,7 @@ const Header= () =>  {
         </div>
       <div className="pr-10">
         <button 
-          className="bg-sky-500 hover:bg-sky-700 text-white rounded-4xl p-2 pr-5 pl-6 "
+          className="bg-sky-500 hover:bg-sky-700 text-white rounded-2xl p-2 pr-5 pl-6 "
           onClick={() => { setIsModalOpen(true); setShowLogin(false); }}
         >Sign In / Register</button>
         {isModalOpen && (

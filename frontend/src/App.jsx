@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import Header from './components/header/header';
-import Menu from './components/menu/Menu';
+
 import Home from './components/home/Home';
 import AboutUs from './components/aboutUs/AboutUs';
 import ServicesOverview from './components/servicesOverview/ServicesOverview';
@@ -9,6 +9,7 @@ import PatientPortal from './components/patient_portal/PatientPortal';
 
 import Footer from './components/footer/Footer';
 import HealthcareReviews from './components/feedback/HealtcareReviews';
+import MenuBar from './components/menu/MenuBar';
 
 function App() {
   
@@ -18,7 +19,7 @@ function App() {
 
         {/* header */}
         <Header/>
-        <Menu/>
+        <MenuBar/>
 
         {/*Home*/}
         <Home/>

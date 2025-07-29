@@ -11,8 +11,8 @@ const Card = ({ count, label }) => {
       </div>
 
       {/* Foreground Content */}
-      <h2 className="text-sky-600 text-3xl pt-1 font-bold relative z-10">{count}</h2>
-      <p className="text-gray-700 font-semibold text-xl pt-2 relative z-10">{label}</p>
+      <h2 className="text-gray-800 text-3xl pt-1 font-bold relative z-10">{count}</h2>
+      <p className="text-gray-600 font-semibold text-xl pt-2 relative z-10">{label}</p>
     </div>
   );
 };
