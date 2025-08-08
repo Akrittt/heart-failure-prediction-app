@@ -17,7 +17,7 @@ const HealthcareReviews = () => {
   const fetchReviews = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${API_BASE_URL}/recent`);
+      const response = await fetch(`${API_BASE_URL}/all`);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
