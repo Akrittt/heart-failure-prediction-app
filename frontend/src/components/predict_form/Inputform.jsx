@@ -1,10 +1,12 @@
 import React,{useState, useEffect} from "react";
 import axios from "axios" ; 
+import PredictionGauge from "./PredictionGauge";
 
 const Inputform = ({onClose}) => {
   const [formData, setFormData] = useState({});
   const [loading, setLoading] = useState(false);
-  const [prediction, setPrediction] = useState(null);
+  const [prediction, setPrediction] = useState(50);
+  const[message, setMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,29 +69,34 @@ const Inputform = ({onClose}) => {
 
   
   try {
-    const response = await axios.post('http://localhost:4000/api/predict', formattedData, {
+    const response = await axios.post('http://localhost:8080/api/predict', formattedData, {
     headers: {
       'Content-Type': 'application/json',
     },
   });
 
     const data = response.data;
-    console.log("Prediction result:", data.prediction);
 
     // You can store it in state, show modal, etc.
-    setPrediction(data.prediction);
+    setPrediction(data.probability*100);
+    setMessage(data.verdict || "Prediction successful!");
+    console.log("Prediction set to:", prediction);
 
   } catch (err) {
     console.error("Submission error:", err);
   }
   
+  
 };
   
   return(
     <div className="fixed inset-0 bg-gray-200/30 backdrop-blur-sm flex items-center  justify-center z-50">
+      <div className="h-screen flex bg-gray-400/40 backdrop-blur-sm items-center justify-center rounded-l-2xl shadow-2xl shadow-gray-800  p-5  max-h-[95vh] relative">
+        <PredictionGauge percentage={prediction} message={message} />
+      </div>
         
       {/* Checkup Modal */}
-      <div className="bg-gradient-to-b bg-sky-100 via-white to-sky-100 rounded-xl shadow-2xl shadow-gray-500  p-5 w-full max-w-lg flex flex-col max-h-[95vh] relative">
+      <div className="bg-gradient-to-b bg-sky-100 via-white to-sky-100 rounded-r-xl shadow-2xl shadow-gray-800  p-5 w-full max-w-lg flex flex-col max-h-[95vh] relative">
         <div className="flex-1 overflow-y-auto scrollbar-hide">
          <div >
             <button className="absolute top-2 right-3 text-gray-500 text-3xl hover:text-sky-500" onClick={onClose}>&times;</button>

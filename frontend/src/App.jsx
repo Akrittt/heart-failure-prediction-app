@@ -1,7 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Header from './components/header/header';
 
+import { AuthProvider } from './components/auth/AuthContext';
 import Home from './components/home/Home';
 import AboutUs from './components/aboutUs/AboutUs';
 import ServicesOverview from './components/servicesOverview/ServicesOverview';
@@ -12,32 +12,34 @@ import HealthcareReviews from './components/feedback/HealtcareReviews';
 import MenuBar from './components/menu/MenuBar';
 
 function App() {
+  const [isLoggedin, setIsLoggedIn] = useState(false);
+
   
   return (
     <>
       <div className='bg-gradient-to-b bg-sky-100 via-white to-sky-100 '>
 
         {/* header */}
-        <Header/>
-        <MenuBar/>
+        <Header isLoggedin={isLoggedin} />
+        <MenuBar />
 
         {/*Home*/}
-        <Home/>
+        <Home />
 
         {/*About Us */}
-        <AboutUs/>
+        <AboutUs />
 
-        {/*Service Overview */}
-        <ServicesOverview/>
+        {/* Service Overview
+          <ServicesOverview/> */}
 
         {/*Patient Portal */}
-        <PatientPortal/>
+        <PatientPortal />
 
-         
+        {/* Healthcare Reviews */}
+        {/* <HealthcareReviews /> */}
 
-       <HealthcareReviews/>
-
-        <Footer/>
+        {/* Footer */}
+        <Footer />
 
 
 

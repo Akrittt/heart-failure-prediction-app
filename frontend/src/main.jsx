@@ -7,10 +7,13 @@ import Home from './components/home/Home.jsx'
 import ServicesOverview from './components/servicesOverview/ServicesOverview.jsx'
 import AboutUs from './components/aboutUs/AboutUs.jsx'
 import PatientPortal from './components/patient_portal/PatientPortal.jsx'
+import { AuthProvider } from './components/auth/AuthContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App/>
-  </StrictMode>,
+  <AuthProvider>
+    <StrictMode>
+      <App />
+    </StrictMode>
+  </AuthProvider>
 )
