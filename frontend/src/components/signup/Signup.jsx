@@ -12,7 +12,6 @@ const Message = ({ text, type }) => {
 };
 
 export default function Signup({ onClose, onSwitch }) {
-  const [formData, setFormData] = useState({ firstname: "", lastname: "", hospital_name: "", email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
 
@@ -66,7 +65,7 @@ export default function Signup({ onClose, onSwitch }) {
     }
   };
   return (
-    <div className="fixed inset-0 bg-gray-200/20 backdrop-blur flex items-center justify-center z-50">
+    <div className="h-screen w-screen inset-0 bg-gray-200/20 backdrop-blur flex items-center justify-center z-50">
       <div className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md relative">
         {/* Close Button */}
         <button
@@ -86,43 +85,60 @@ export default function Signup({ onClose, onSwitch }) {
         {/* Form */}
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="flex space-x-4">
-            <input
-              type="text"
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
-              placeholder="First name"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              value={lastname}
-              onChange={(e) => setLastname(e.target.value)}
-              placeholder="Last name"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <div>
+              <label className="block text-gray-700 text-sm font-bold mb-2">
+                First Name
+              </label>
+              <input
+                type="text"
+                value={firstname}
+                onChange={(e) => setFirstname(e.target.value)}
+                placeholder="Akrit"
+                className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 text-sm font-bold mb-2">
+                Last Name
+              </label>
+              <input
+                type="text"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}
+                placeholder="Last name"
+                className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
           </div>
-
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Hospital Name
+          </label>
           <input
             type="text"
             value={hospital_name}
             onChange={(e) => setHospitalName(e.target.value)}
-            placeholder="Hospital Name"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="All India Institute of Medical Sciences(AIIMS)"
+            className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Email Address
+          </label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Password
+          </label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             type="submit"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Header from './components/header/header';
+// import Header from './components/header/header';
 
 import { AuthProvider } from './components/auth/AuthContext';
 import Home from './components/home/Home';
@@ -20,8 +20,8 @@ function App() {
       <div className='bg-gradient-to-b bg-sky-100 via-white to-sky-100 '>
 
         {/* header */}
-        <Header isLoggedin={isLoggedin} />
-        <MenuBar />
+        {/* <Header isLoggedin={isLoggedin} /> */}
+        <MenuBar  isLoggedin={isLoggedin}/>
 
         {/*Home*/}
         <Home />
