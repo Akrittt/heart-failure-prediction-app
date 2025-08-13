@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Inputform from "../predict_form/Inputform.jsx";
 import doctorImg from "../../assets/doctor.png";
 import {UserSearch} from "lucide-react";
@@ -6,6 +6,13 @@ import Card from "./card";
 
 function Home() {
     const [isPredictFormOpen, setIsPredictFormOpen] = useState(false);
+    useEffect(() => {
+            if (isPredictFormOpen) {
+                document.body.style.overflow = "hidden"; // Disable scroll
+            } else {
+                document.body.style.overflow = "auto"; // Enable scroll
+            }
+        }, [isPredictFormOpen]);
     return (
         <section id="Home" className="grid justify-center lg:flex  md:flex-nowrap mt-5">
             <div className="flex flex-col justify-center text-center gap-7 p-5 md:p-20  ">
