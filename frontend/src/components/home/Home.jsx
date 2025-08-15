@@ -1,25 +1,29 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Inputform from "../predict_form/Inputform.jsx";
 import doctorImg from "../../assets/doctor.png";
-import {UserSearch} from "lucide-react";
+import { UserSearch } from "lucide-react";
 import Card from "./card";
 
 function Home() {
     const [isPredictFormOpen, setIsPredictFormOpen] = useState(false);
     useEffect(() => {
-            if (isPredictFormOpen) {
-                document.body.style.overflow = "hidden"; // Disable scroll
-            } else {
-                document.body.style.overflow = "auto"; // Enable scroll
-            }
-        }, [isPredictFormOpen]);
+        if (isPredictFormOpen) {
+            document.body.style.overflow = "hidden"; // Disable scroll
+        } else {
+            document.body.style.overflow = "auto"; // Enable scroll
+        }
+    }, [isPredictFormOpen]);
     return (
-        <section id="Home" className="grid justify-center lg:flex  md:flex-nowrap mt-5">
-            <div className="flex flex-col justify-center text-center gap-7 p-5 md:p-20  ">
-
-                <h1 className="font-bold text-4xl md:text-5xl text-gray-800">Comprehensive Care For<br />A <span className="text-sky-700">Healthier</span> Tommorow</h1>
+        <section id="Home" className="grid justify-center lg:flex  md:flex-nowrap ">
+            <div className="flex flex-col justify-center text-center gap-7 p-5 md:p-20 ">
+                <h1 className="font-bold text-4xl md:text-5xl text-gray-800 ">
+                    Heart<span className="text-sky-500">Care.ai</span>
+                </h1>
+                <h1 className="font-bold text-4xl md:text-5xl text-gray-800 ">
+                    Comprehensive Care for a Healthier Tomorow
+                </h1>
                 <p className=" text-lg text-gray-600">
-                    Our application offers an intelligent prediction system for heart failure patient readmission. Empowering healthcare providers with data-driven insights to improve post-discharge outcomes with AI assistant.
+                    HeartCare.ai provides AI-powered predictions for heart failure readmission, empowering healthcare providers with actionable insights to improve post-discharge outcomes.
                 </p>
                 <div className="flex justify-center gap-x-4 md:gap-x-2">
                     <button

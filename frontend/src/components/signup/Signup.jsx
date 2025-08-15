@@ -82,19 +82,24 @@ export default function Signup({ onClose, onSwitch }) {
         setLoading(true);
         setMessage(null);
 
+        const verificationData = {
+            email: formData.email,
+        };
+
         // Basic validation
         if (!formData.firstname || !formData.lastname || !formData.hospital_name || !formData.email || !formData.password) {
             setMessage({ text: "Please fill out all fields", type: "error" });
             setLoading(false);
             return;
         }
-
+        console.log(verificationData);
         try {
             const response = await fetch("http://localhost:8080/api/auth/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(verificationData),
             });
+            
             
             const data = await response.text();
             
@@ -115,7 +120,7 @@ export default function Signup({ onClose, onSwitch }) {
   const handleVerifyOtp = async (otp) => {
         setLoading(true);
         setMessage(null);
-
+        
         const verificationData = {
             ...formData,
             otp: otp,

@@ -9,7 +9,7 @@ import {
     X,
 
 } from "lucide-react";
-function MenuBar(isLoggedin) {
+function MenuBar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
@@ -27,13 +27,13 @@ function MenuBar(isLoggedin) {
     }, [isModalOpen]);
     return (
         <>
-            <nav className="flex justify-between items-center bg-sky-400  text-white py-3 sticky top-0 z-50 px-5">
+            <nav className="flex justify-between items-center bg-sky-100  text-sky-600 py-3 sticky top-0 z-50 px-5">
                 <div
                     className="flex ">
                     <img src={Image} className='h-8 pr-2' />
                     <p className='hidden lg:block text-xl font-bold'>HeartCare.ai</p>
                 </div>
-                <ul className="hidden md:flex justify-center content-center gap-x-15 ">
+                <ul className="hidden md:flex justify-center content-center font-semibold gap-x-15 ">
                     <li>
                         <a href="#Home"
                             className="relative after:block after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ">
@@ -68,7 +68,7 @@ function MenuBar(isLoggedin) {
                         <LogedIn user={user} />
                     ) : (
                         <button
-                            className="bg-sky-500 hover:bg-sky-700 text-white rounded-2xl p-2 pr-5 pl-6"
+                            className="bg-sky-500 hover:bg-sky-700 text-white rounded-2xl p-2 pr-5 pl-6 hidden md:block"
                             onClick={() => { setIsModalOpen(true); setShowLogin(false); }}
                         >
                             Sign In / Register
@@ -79,14 +79,14 @@ function MenuBar(isLoggedin) {
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden flex items-center">
-                    <button onClick={toggleMenu} className="text-white">
+                    <button onClick={toggleMenu} >
                         {menuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
 
                 {/* Mobile Menu Panel */}
                 {menuOpen && (
-                    <div className="absolute top-0 right-0 w-64 h-screen bg-sky-500 shadow-lg p-5 flex flex-col gap-4 md:hidden">
+                    <div className="absolute top-0 right-0 w-64 h-screen bg-sky-500 text-white shadow-lg p-5 flex flex-col gap-4 md:hidden">
                         {/* Close Button */}
                         <button onClick={closeMenu} className="self-end">
                             <X size={28} className="text-white" />

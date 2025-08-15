@@ -42,10 +42,9 @@ export default function Login({ onClose, onSwitch }) {
       const data = await response.json();
       if (response.ok) {
         setMessage({ text: data.message || "Login successful!", type: "success" });
-        console.log("Login successful:", data);// Log the response data
         const userData = { name: data.data.firstname };
         localStorage.setItem("authToken", data.data.access_token);
-        console.log("authToken:", data.data.access_token); //print the token to console
+        window.location.reload();
         setUser(userData);
         onClose();
       } else {
