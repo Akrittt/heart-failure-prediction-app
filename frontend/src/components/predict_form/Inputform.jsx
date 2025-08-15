@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from "react";
 import axios from "axios" ; 
-import PredictionGauge from "./PredictionGauge";
+import PredictionGauge from "./PredictionGauge.jsx"; // Adjust the import path as necessary
 
 const Inputform = ({onClose}) => {
   const [formData, setFormData] = useState({});

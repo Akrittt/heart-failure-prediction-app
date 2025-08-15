@@ -1,5 +1,5 @@
 import React, { useState, useEffect,useRef } from 'react';
-import { useAuth } from '../auth/AuthContext';
+import { useAuth } from '../auth/AuthContext.jsx';
 import { LogOut } from 'lucide-react';
 const LogedIn = ({ user }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

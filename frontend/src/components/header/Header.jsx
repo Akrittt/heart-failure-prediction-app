@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Image from "../../assets/logo.png"
-import Signup from '../signup/Signup';
-import Login from '../signup/Login';
-import { useAuth } from '../auth/AuthContext';
-import LogedIn from '../menu/LogedIn';
+import Signup from '../signup/Signup.jsx';
+import Login from '../signup/Login.jsx';
+import { useAuth } from '../auth/AuthContext.jsx';
+import LogedIn from '../menu/LogedIn.jsx';
 
 const Header = (isLoggedin) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

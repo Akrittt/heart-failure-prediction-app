@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { useAuth } from "../auth/AuthContext";
+import { useAuth } from "../auth/AuthContext.jsx"; // Adjust the import path as necessary
 
 export default function Login({ onClose, onSwitch }) {
   const { setUser } = useAuth();

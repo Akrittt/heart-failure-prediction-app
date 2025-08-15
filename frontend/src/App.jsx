@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 // import Header from './components/header/header';
-import ContactUs from './components/contactUs/ContactUs';
-import Home from './components/home/Home';
-import AboutUs from './components/aboutUs/AboutUs';
+import ContactUs from './components/contactUs/ContactUs.jsx';
+import Home from './components/home/Home.jsx';
+import AboutUs from './components/aboutUs/AboutUs.jsx';
 import ServicesOverview from './components/servicesOverview/ServicesOverview';
-import PatientPortal from './components/patient_portal/PatientPortal';
+import PatientPortal from './components/patient_portal/PatientPortal.jsx';
 
-import Footer from './components/footer/Footer';
-import HealthcareReviews from './components/feedback/HealtcareReviews';
-import MenuBar from './components/menu/MenuBar';
+import Footer from './components/footer/Footer.jsx';
+import HealthcareReviews from './components/feedback/HealtcareReviews.jsx';
+import MenuBar from './components/menu/MenuBar.jsx';
 
 function App() {
   const [isLoggedin, setIsLoggedIn] = useState(false);

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Inputform from "../predict_form/Inputform.jsx";
 import doctorImg from "../../assets/doctor.png";
 import { UserSearch } from "lucide-react";
-import Card from "./card";
+import Card from "./Card.jsx";
 
 function Home() {
     const [isPredictFormOpen, setIsPredictFormOpen] = useState(false);
