@@ -11,13 +11,12 @@ const HealthcareReviews = () => {
   const [averageRating, setAverageRating] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
 
-  // API Configuration
-  const API_BASE_URL = 'http://localhost:8080/api/reviews';
+  
 
   const fetchReviews = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${API_BASE_URL}/all`);
+      const response = await fetch('http://localhost:8080/api/reviews/all');
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -130,7 +129,7 @@ const HealthcareReviews = () => {
   return (
     <div className=" mx-auto p-10 bg-gradient-to-br from-blue-50 to-white shadow-lg">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">Patient Reviews</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-2">Doctor Reviews</h2>
         <p className="text-gray-600">See what our doctors are saying about their healthcare experience</p>
         <div className="flex items-center justify-center mt-4 space-x-2">
           <div className="flex">{renderStars(Math.round(averageRating))}</div>
@@ -176,7 +175,7 @@ const HealthcareReviews = () => {
                         <User size={20} className="text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-800">{review.name}</h4>
+                        <h4 className="font-semibold text-gray-800">Dr. {review.name}</h4>
                         <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
                       </div>
                     </div>

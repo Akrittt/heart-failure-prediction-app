@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import Header from './components/header/header';
-
-import { AuthProvider } from './components/auth/AuthContext';
+import ContactUs from './components/contactUs/ContactUs';
 import Home from './components/home/Home';
 import AboutUs from './components/aboutUs/AboutUs';
 import ServicesOverview from './components/servicesOverview/ServicesOverview';
@@ -34,10 +33,10 @@ function App() {
 
         {/*Patient Portal */}
         <PatientPortal />
+        <ContactUs />
 
         {/* Healthcare Reviews */}
-        {/* <HealthcareReviews /> */}
-
+        <HealthcareReviews />
         {/* Footer */}
         <Footer />
 

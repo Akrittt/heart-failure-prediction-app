@@ -33,7 +33,7 @@ const LogedIn = ({ user }) => {
         <div className="hidden md:flex items-center space-x-4" ref={profileMenuRef}>
             <span className="font-medium text-sky-900 text-lg">Hi, {user.name}</span>
             <div onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}>
-                <UserIcon letter={user.name.charAt(0)} />
+                <UserIcon letter={user.name.charAt(0).toUpperCase()} />
             </div>
 
             {/* Profile Dropdown Menu */}

@@ -121,7 +121,7 @@ const PatientPortal = () => {
     try {
       const token = localStorage.getItem("authToken"); // JWT token from login
 
-      const response = await fetch("http://localhost:8080/api/patients", {
+      const response = await fetch("/api/patients", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -12,7 +12,7 @@ import {
 function MenuBar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [showLogin, setShowLogin] = useState(false);
+    const [showLogin, setShowLogin] = useState(true); // true for login, false for signup
     const { user } = useAuth();
 
     const toggleMenu = () => setMenuOpen((prev) => !prev);
@@ -55,7 +55,7 @@ function MenuBar() {
                         </a>
                     </li>
                     <li>
-                        <a href=""
+                        <a href="#ContactUs"
                             className="relative after:block after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ">
                             Contact Us
                         </a>
@@ -69,7 +69,7 @@ function MenuBar() {
                     ) : (
                         <button
                             className="bg-sky-500 hover:bg-sky-700 text-white rounded-2xl p-2 pr-5 pl-6 hidden md:block"
-                            onClick={() => { setIsModalOpen(true); setShowLogin(false); }}
+                            onClick={() => { setIsModalOpen(true); setShowLogin(true); }}
                         >
                             Sign In / Register
                         </button>
@@ -108,7 +108,7 @@ function MenuBar() {
                             onClick={() => {
                                 closeMenu();
                                 setIsModalOpen(true);
-                                setShowLogin(false);
+                                setShowLogin(true);
                             }}
                         >Sign Up / Register</button>
 

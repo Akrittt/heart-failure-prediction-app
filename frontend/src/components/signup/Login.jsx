@@ -84,7 +84,7 @@ export default function Login({ onClose, onSwitch }) {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@gmail.com"
+          placeholder="hello123@gmail.com"
           className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
@@ -95,7 +95,7 @@ export default function Login({ onClose, onSwitch }) {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
+          placeholder="hello123"
           className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-8"
           required
         />
