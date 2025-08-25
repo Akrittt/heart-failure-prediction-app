@@ -94,7 +94,7 @@ export default function Signup({ onClose, onSwitch }) {
         }
         console.log(verificationData);
         try {
-            const response = await fetch("http://localhost:8080/api/auth/signup", {
+            const response = await fetch("https://heart-failure-prediction-app.onrender.com/api/auth/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(verificationData),
@@ -127,7 +127,7 @@ export default function Signup({ onClose, onSwitch }) {
         };
 
         try {
-            const response = await fetch('http://localhost:8080/api/auth/verify-otp', {
+            const response = await fetch('https://heart-failure-prediction-app.onrender.com/api/auth/verify-otp', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(verificationData),

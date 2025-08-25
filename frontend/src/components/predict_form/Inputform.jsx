@@ -70,7 +70,7 @@ const Inputform = ({onClose}) => {
 
   
   try {
-    const response = await axios.post('http://localhost:8080/api/predict', formattedData, {
+    const response = await axios.post('https://heart-failure-prediction-app.onrender.com/api/predict', formattedData, {
     headers: {
       'Content-Type': 'application/json',
     },

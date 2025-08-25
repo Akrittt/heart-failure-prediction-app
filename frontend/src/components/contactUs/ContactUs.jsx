@@ -24,7 +24,7 @@ const ContactUs = () => {
     setStatus('');
 
     try {
-      const response = await fetch('localhost:8080/api/contact', {
+      const response = await fetch('https://heart-failure-prediction-app.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

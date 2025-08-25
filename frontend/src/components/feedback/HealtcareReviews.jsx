@@ -16,7 +16,7 @@ const HealthcareReviews = () => {
   const fetchReviews = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/api/reviews/all');
+      const response = await fetch('https://heart-failure-prediction-app.onrender.com/api/reviews/all');
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

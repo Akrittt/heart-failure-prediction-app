@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     if (token) {
-      fetch("http://localhost:8080/api/auth/user", {
+      fetch("https://heart-failure-prediction-app.onrender.com/api/auth/user", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },

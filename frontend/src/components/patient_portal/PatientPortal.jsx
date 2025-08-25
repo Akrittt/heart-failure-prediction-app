@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Search, UserPlus, User, Calendar, Phone, Mail, MapPin, FileText, Plus, Heart, Activity, Shield, AlertTriangle } from 'lucide-react';
 
 // --- API Configuration ---
-const API_BASE_URL = 'http://localhost:8080/api/patients';
+const API_BASE_URL = 'https://heart-failure-prediction-app.onrender.com/api/patients';
 // In a real app, this would come from an auth context or local storage
 const AUTH_TOKEN = localStorage.getItem('authToken');
 
